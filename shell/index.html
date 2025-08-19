@@ -8,6 +8,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+    // Node-Globals für Browser shimmen
+    window.global = window;
+    // globaler "process" für Libraries wie React
+    // (ES-Module sehen diese globale Var auch)
+    var process = { env: { NODE_ENV: 'production' } };
+  </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
