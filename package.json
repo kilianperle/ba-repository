@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "workspaces": [
+    "modules/forms",
+    "modules/dashboard"
+  ],
+  "scripts": {
+    "build:forms": "npm run -w modules/forms build",
+    "build:dashboard": "npm run -w modules/dashboard build",
+    "build:modules": "npm run build:forms && npm run build:dashboard",
+    "publish:pages": "shx rm -rf docs && shx mkdir -p docs/forms docs/dashboard && shx cp modules/forms/dist/forms.es.js docs/forms/ && shx cp modules/dashboard/dist/dashboard.es.js docs/dashboard/"
+  },
+  "name": "ba-prototyp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilianperle/ba-repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kilianperle/ba-repository/issues"
+  },
+  "homepage": "https://github.com/kilianperle/ba-repository#readme",
+  "devDependencies": {
+    "shx": "^0.4.0"
+  }
+}
