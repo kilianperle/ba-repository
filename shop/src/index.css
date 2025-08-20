@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+button:disabled {
+  background-color: gray;
+}
