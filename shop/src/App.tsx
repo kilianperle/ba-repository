@@ -18,7 +18,7 @@ export default function App() {
     () =>
       selected.map((name) => ({
         name,
-        url: `https://kilianperle.github.io/ba-repository/${name}/${name}.es.js`,
+        url: `https://kilianperle.github.io/ba-prototype/${name}/${name}.es.js`,
       })),
     [selected]
   )
